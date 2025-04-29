@@ -1,0 +1,28 @@
+{{ define "content" }}
+  <h2 class="w3-text-blue">HTMX + W3.CSS + Go standard router Example</h2>
+
+  <!-- Time button -->
+  <button 
+    class="w3-button w3-green"
+    hx-get="/time"
+    hx-target="#clock"
+    hx-swap="innerHTML">
+    Get Current Time
+  </button>
+
+  <div id="clock" class="w3-panel w3-light-grey w3-margin-top"></div>
+
+  <!-- Greet form -->
+  <form 
+    class="w3-container w3-card w3-margin-top"
+    hx-post="/greet"
+    hx-target="#greet-result"
+    hx-swap="innerHTML"
+  >
+    <label class="w3-text-grey"><b>Your Name</b></label>
+    <input class="w3-input w3-border w3-margin-bottom" type="text" name="name" placeholder="Enter your name" required>
+    <button class="w3-button w3-blue" type="submit">Say Hello</button>
+  </form>
+
+  <div id="greet-result" class="w3-margin-top"></div>
+{{ end }}
