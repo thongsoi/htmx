@@ -1,0 +1,7 @@
+htmx-w3-go/
+├── main.go
+└── templates/
+    ├── base.html
+    ├── index.html
+    ├── greet.html
+    └── time.html
